@@ -1,0 +1,135 @@
+Testprotokoll A1:
+1.
+Testing max([-4, 2, 0, 0, -23])
+ Expected: -3.
+ Result: 2.
+ ERROR: Result does not match expected result.
+
+Testing max([-4, 2, 0, 0, -23])
+ Expected: 2.
+ Result: 2.
+ SUCCESS: Result matches expected result.
+
+Testing max([-1, -1, -1, -2, -334, -123, -3])
+ Expected: -1.
+ Result: 0.
+ ERROR: Result does not match expected result.
+
+Testing add([1, 2, 3, 4, 5], 3)
+ Expected: [4, 5, 6, 7, 8].
+Result: [-2, -1, 0, 1, 2, 0].
+ ERROR Result has no correct length.
+
+Testing add([1, 2, 3, 4, 5], 3)
+ Expected: [4, 5, 6, -7, 8].
+Result: [-2, -1, 0, 1, 2, 0].
+ ERROR Result has no correct length.
+
+Testing add([-1, -2, 3, -4, -5], -3)
+ Expected: [-4, -5, 0, -7, -8].
+Result: [2, 1, 6, -1, -2, 0].
+ ERROR Result has no correct length.
+
+Testing add([-1, -2, 3, -4, -5], -3)
+ Expected: [-4, -5, 0, -7].
+Result: [2, 1, 6, -1, -2, 0].
+ ERROR Result has no correct length.
+
+2.
+Testing max([-4, 2, 0, 0, -23])
+ Expected: -3.
+ Result: 2.
+ ERROR: Result does not match expected result.
+
+Testing max([-4, 2, 0, 0, -23])
+ Expected: 2.
+ Result: 2.
+ SUCCESS: Result matches expected result.
+
+Testing max([-1, -1, -1, -2, -334, -123, -3])
+ Expected: -1.
+ Result: -1.
+ SUCCESS: Result matches expected result.
+
+Testing add([1, 2, 3, 4, 5], 3)
+ Expected: [4, 5, 6, 7, 8].
+ Result: [4, 5, 6, 7, 8].
+ SUCCESS Result has correct length.
+ SUCCESS: Result matches expected result.
+
+Testing add([1, 2, 3, 4, 5], 3)
+ Expected: [4, 5, 6, -7, 8].
+ Result: [4, 5, 6, 7, 8].
+ SUCCESS Result has correct length.
+ ERROR @ idx 3: 7 does not match expected result -7.
+
+Testing add([-1, -2, 3, -4, -5], -3)
+ Expected: [-4, -5, 0, -7, -8].
+ Result: [-4, -5, 0, -7, -8].
+ SUCCESS Result has correct length.
+ SUCCESS: Result matches expected result.
+
+Testing add([-1, -2, 3, -4, -5], -3)
+ Expected: [-4, -5, 0, -7].
+ Result: [-4, -5, 0, -7, -8].
+ ERROR Result has no correct length.
+
+Testprotokoll A2:
+1.
+ Testing   calcCostPrice (-5.00, 3.40):
+  Result : 0.00
+  ERROR :  Result   does   not   match   expected   result   3.00
+ Testing   calcSalesPrice (-5.00,  3.40):
+  Result : 0.00
+  SUCCESS :  Result   matches   expected   result
+2.
+ Testing   calcCostPrice (-5.00, -5.00):
+  Result : 0.00
+  SUCCESS :  Result   matches   expected   result
+ Testing   calcSalesPrice (-5.00,  -5.00):
+  Result : 0.00
+  SUCCESS :  Result   matches   expected   result
+3.
+ Testing   calcCostPrice (1.02, 3.46):
+  Result : 5.38
+  ERROR :  Result   does   not   match   expected   result   0.00
+ Testing   calcSalesPrice (1.02,  3.46):
+  Result : 6.99
+  ERROR :  Result   does   not   match   expected   result   6.99
+
+the last test was with expected cost 6.991 and the visual cut is on 2 decimal places.
+
+Testprotokoll A3:
+1.
+Testing numberToText (832):
+ Result: EightThreeTwo
+ SUCCESS: Result matches expected result
+2.
+Testing numberToText (-832):
+ Result: MinusEightThreeTwo
+ SUCCESS: Result matches expected result
+3.
+Testing numberToText (7001):
+ Result: SevenZeroZeroOne
+ SUCCESS: Result matches expected result
+4.
+Testing numberToText (-1):
+ Result: MinusOne
+ SUCCESS: Result matches expected result
+
+Testprotokoll A4:
+1.
+Testing roundToClosest (-11,0,[11, 0, -1, -33, -11, -5]):
+Result: [0, 0, 0, -11, -11, 0]
+SUCCESS: Result has correct length
+SUCCESS: Result matches expected result
+2.
+Testing roundToClosest (0,11,[11, 0, -1, -33, -11, 7]):
+Result: [11, 0, 0, 0, 0, 11]
+SUCCESS: Result has correct length
+SUCCESS: Result matches expected result
+3.
+Testing roundToClosest (150,300,[123, 155, 333, -333, 225, 223]):
+Result: [150, 150, 300, 150, 300, 150]
+SUCCESS: Result has correct length
+SUCCESS: Result matches expected result
